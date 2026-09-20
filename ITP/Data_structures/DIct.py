@@ -26,3 +26,16 @@ for i in m:
     s[i] = s.get(i, 0) + 1
 print(s)
 
+#task 3
+ee = {"Асан": 85, "Дана": 92, "Ерлан": 78, "Мадина": 95}
+tt = 0
+rr = {}
+for i, e in ee.items():
+    tt += e
+tt = tt / len(ee)
+for i, e in ee.items():
+    if (tt > e):
+        rr[i] = e
+print(rr)
+
+#task 4
