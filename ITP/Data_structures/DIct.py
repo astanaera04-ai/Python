@@ -3,13 +3,13 @@ adam = {"aty": "Asan", "jasy" : 25, "qala" : "Astana"}
 adam["jasy"] = 26
 adam["job"] = "in"
 adam.get("aty")
-for kit in adam:                    # тек киттерді береді
+for kit in adam:
     print(kit)
 
-for man in adam.values():            # тек мәндерді береді
+for man in adam.values():
     print(man)
 
-for kit, man in adam.items():        # екеуін бірге береді (ЕҢ ЖИІ ҚОЛДАНЫЛАДЫ)
+for kit, man in adam.items():
     print(kit, "->", man)
 
 #task 2
@@ -39,3 +39,10 @@ for i, e in ee.items():
 print(rr)
 
 #task 4
+rr ={"алма": 5, "банан": 3}
+yy = {"банан": 2, "жүзім": 7}
+
+n = rr.copy()
+for i, j in yy.items():
+    n[i] = n.get(i, 0) + j
+print(n)
