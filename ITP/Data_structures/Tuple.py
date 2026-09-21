@@ -25,7 +25,7 @@ print("City: " , e, "Year: ", r, "Seson: ", t)
 p = [("Астана", -15), ("Алматы", 2), ("Шымкент", 8), ("Атырау", -5), ("Көкшетау", -18)]
 tt = p[0]
 for i in range(len(p)):
-    if(p[i][1] > tt[1]):
+    if(p[i][1] < tt[1]):
         tt = p[i]
 print("Name: ", tt[0], "C: ", tt[1])
 

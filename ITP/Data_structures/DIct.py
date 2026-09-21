@@ -12,13 +12,13 @@
 # for kit, man in adam.items():
 #     print(kit, "->", man)
 #
-# #task 2
-# tauarlar = {"нан": 150, "сүт": 400, "жұмыртқа": 900, "май": 1200}
-# a = 0
-# for i , j in tauarlar.items():
-#     a +=j
-# print("Sum" , a)
-#
+#task 2
+tauarlar = {"нан": 150, "сүт": 400, "жұмыртқа": 900, "май": 1200}
+en_kymbat = list(tauarlar.items())[0]
+for kit, man in tauarlar.items():
+    if man > en_kymbat[1]:
+        en_kymbat = (kit, man)
+print("Ең қымбат:", en_kymbat[0], en_kymbat[1])
 # #task 3
 # s = {}
 # m = "pythonpp"

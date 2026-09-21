@@ -1,26 +1,26 @@
-# #task 1
-# topA = {"Асан", "Дана", "Ерлан"}
-# topB = {"Дана", "Мадина", "Ерлан"}
-# topC = set()
-# topAA = set()
-# topBB = set()
-# for i in topA:
-#     if (i in topB):
-#         topC.add(i)
-#     if (i not in topB):
-#         topAA.add(i)
-# for i in topB:
-#     if (i not in topA):
-#         topBB.add(i)
-# print(topC)
-# print(topAA)
-# print(topBB)
-#
-# #task 2
-# q = [5, 2, 8, 2, 5, 9, 8, 1]
-# w = set(q)
-# print (len(w))
-#
+#task 1
+topA = {"Асан", "Дана", "Ерлан"}
+topB = {"Дана", "Мадина", "Ерлан"}
+topC = set()
+topAA = set()
+topBB = set()
+for i in topA:
+    if (i in topB):
+        topC.add(i)
+    if (i not in topB):
+        topAA.add(i)
+for i in topB:
+    if (i not in topA):
+        topBB.add(i)
+print(topC)
+print(topAA)
+print(topBB)
+
+#task 2
+q = [5, 2, 8, 2, 5, 9, 8, 1]
+w = set(q)
+print (len(w))
+
 
 #task 3
 e = {"Асан": ["математика", "физика"], "Дана": ["физика", "химия"], "Ерлан": ["математика", "химия"]}
