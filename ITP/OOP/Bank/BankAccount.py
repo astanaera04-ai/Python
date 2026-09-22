@@ -9,16 +9,29 @@ class BankAccount:
     def withdraw(self, amount):
         if amount > self.balans:
             print("Қате: балансыңызда жеткілікті қаражат жоқ")
+            return False  # <-- ОСЫНЫ ҒАНА ҮМЫТЫП КЕТТІҢ
         else:
             self.balans -= amount
             print(f"{amount} тенге алынды. Жана баланс: {self.balans}")
+            return True
+    def transfer(self, basga_shot, summa):
+        if self.withdraw(summa):
+            basga_shot.balans += summa
+            print(f"{summa} теңге {basga_shot.ie}-ге аударылды")
+        else:
+            print("Аудару сәтсіз аяқталды")
 
 shot1 = BankAccount("Bek", 5000,"жинақ")
 shot1.deposit(1000)
 shot1.withdraw(100)
-shot2 = BankAccount("Ali", 6000, "жинақ")
+shot2 = BankAccount("Ali", 60000, "жинақ")
 shot3 = BankAccount("Ерлан", 2000, "жинақ")
 
+shot4 = BankAccount("Айгүл", 3000,"ағымдағы" )
+shot4.deposit(5000)
+shot4.withdraw(6000)
+
+shot1.transfer(shot2, 99)
 # print(shot1.ie, shot1.balans)
 # print(shot2.ie, shot2.balans)
 # print(shot3.shot, shot3.balans, shot3.ie)
