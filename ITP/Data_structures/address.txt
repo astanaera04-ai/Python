@@ -1,0 +1,13 @@
+Claude AI is a next-generation conversational artificial intelligence assistant created by Anthropic, trained using Constitutional AI to be safe, accurate, and helpful.
+
+Key Features & Capabilities
+
+• Core Models: Built on a family of proprietary models (including Haiku, Sonnet, Opus, Fable, and Mythos) designed for deep reasoning, long-context understanding, and coding.
+• Artifacts & Creation: Allows users to draft, edit, and iterate on code, interactive web apps, documents, slides, and designs in a dedicated side-by-side workspace.
+• File Processing: Analyzes and summarizes large volumes of text, PDFs, Word documents, spreadsheets, and images.
+• Advanced Tools: Features live web search, data connectors, memory settings, Claude Code, and research reporting tools.
+
+Pricing Tiers
+
+• Free Plan: Access to standard models, web search, file uploads, and basic artifact creation.
+• Pro Plan: Costs $20 per month (or about $17 per month when billed annually), offering higher usage limits, access to more powerful models, and specialized research

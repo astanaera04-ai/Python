@@ -33,3 +33,10 @@ print("Name: ", tt[0], "C: ", tt[1])
 aa = (5, 3)
 qq, ww = aa
 print("Area: ", qq * ww, "P: ", 2 * (qq + ww))
+
+#5
+def main():
+    coordinates = (42.376, -71.115)
+    print(f"Latitude: {coordinates [0]}")
+    print(f"Longitude: {coordinates [1]}")
+main()

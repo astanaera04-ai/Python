@@ -45,16 +45,6 @@ print(Shot1.bank_aty)
 print(Shot2.bank_aty)
 
 
-
-
-
-
-
-
-
-
-
-
 # shot1 = BankAccount("Bek", 5000,"жинақ")
 # shot1.deposit(1000)
 # shot1.withdraw(100)
