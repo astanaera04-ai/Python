@@ -4,6 +4,8 @@ class BankAccount:
     minimum_balans = 500
     def __init__(self, ie, baslangy_summa, shot_turi):
         self.ie = ie
+        if baslangy_summa < 0:
+            raise ValueError("Бастапқы сумма 0 ден төмен")
         self.balans = baslangy_summa
         self.shot = shot_turi
         BankAccount.jalpy_shot_sany += 1
@@ -36,12 +38,17 @@ Shot1 = BankAccount("Bek1", 500, "жинақ")
 Shot2 = BankAccount("Bek2", 1000, "жинақ")
 Shot3 = BankAccount("Bek3", 1500, "жинақ")
 
-
+#exception
 try:
     Shot1.deposit(-100)
 except ValueError as e:
-    print("Қате ", e, end="\n")
+    print("Қате- ", e, end="\n")
 
+try:
+    Shot4 = BankAccount("Medi",-100, "Жинақ")
+except ValueError as e:
+    print("Қате- ",e)
+print(BankAccount.jalpy_shot_sany)
 
 
 
