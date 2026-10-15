@@ -10,6 +10,10 @@ class BankAccount:
         self.shot_nomiri = BankAccount.jalpy_shot_sany
 
     def deposit(self, summa):
+        #------raise -----
+        if summa <= 0:
+            raise ValueError("Сумма 0 ден үлкен болу керек")
+
         self.balans += summa
         print(f"{summa} тенге салынды. Жана баланыс: {self.balans}")
     def withdraw(self, amount):
@@ -27,22 +31,40 @@ class BankAccount:
             print(f"{summa} теңге {basga_shot.ie}-ге аударылды")
         else:
             print("Аудару сәтсіз аяқталды")
-print(BankAccount.bank_aty)
+# print(BankAccount.bank_aty)
 Shot1 = BankAccount("Bek1", 500, "жинақ")
 Shot2 = BankAccount("Bek2", 1000, "жинақ")
 Shot3 = BankAccount("Bek3", 1500, "жинақ")
-print(BankAccount.jalpy_shot_sany)
-print("Бірінші шот балансы: ", Shot1.balans)
-print("Екінші шот баланысы: ", Shot2.balans)
-print("Үшінші шот баланысы: ", Shot3.balans)
-Shot1.withdraw(500)
 
-BankAccount.bank_aty = "Halyk bank"
-print(BankAccount.bank_aty)
-Shot1.bank_aty = "BekBoy"
-Shot2.bank_aty = "BekBoy2"
-print(Shot1.bank_aty)
-print(Shot2.bank_aty)
+
+try:
+    Shot1.deposit(-100)
+except ValueError as e:
+    print("Қате ", e, end="\n")
+
+
+
+
+
+
+
+
+
+
+
+
+# print(BankAccount.jalpy_shot_sany)
+# print("Бірінші шот балансы: ", Shot1.balans)
+# print("Екінші шот баланысы: ", Shot2.balans)
+# print("Үшінші шот баланысы: ", Shot3.balans)
+# Shot1.withdraw(500)
+#
+# BankAccount.bank_aty = "Halyk bank"
+# print(BankAccount.bank_aty)
+# Shot1.bank_aty = "BekBoy"
+# Shot2.bank_aty = "BekBoy2"
+# print(Shot1.bank_aty)
+# print(Shot2.bank_aty)
 
 
 # shot1 = BankAccount("Bek", 5000,"жинақ")
