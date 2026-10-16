@@ -2,6 +2,7 @@ class BankAccount:
     bank_aty = "Казкоммерц Банк"
     jalpy_shot_sany = 0
     minimum_balans = 500
+
     def __init__(self, ie, baslangy_summa, shot_turi):
         self.ie = ie
         if baslangy_summa < 0:
@@ -12,12 +13,14 @@ class BankAccount:
         self.shot_nomiri = BankAccount.jalpy_shot_sany
 
     def deposit(self, summa):
-        #------raise -----
+        #------------raise ---------------
         if summa <= 0:
             raise ValueError("Сумма 0 ден үлкен болу керек")
 
         self.balans += summa
         print(f"{summa} тенге салынды. Жана баланыс: {self.balans}")
+
+
     def withdraw(self, amount):
 
         if amount > self.balans - self.minimum_balans:
@@ -27,35 +30,58 @@ class BankAccount:
             self.balans -= amount
             print(f"{amount} тенге алынды. Жана баланс: {self.balans}")
             return True
+
+
     def transfer(self, basga_shot, summa):
         if self.withdraw(summa):
             basga_shot.balans += summa
             print(f"{summa} теңге {basga_shot.ie}-ге аударылды")
         else:
             print("Аудару сәтсіз аяқталды")
-# print(BankAccount.bank_aty)
+
+    def payyz_qosu(self, payyz):
+        self.balans *= ( payyz / 100 + 1 )
+        print("Пайыз косылгандагы сумма", self.balans)
+
+
+class SavingAccount(BankAccount):
+    def __init__(self, ie,balans , shot_turi, payyz):
+        super().__init__(ie, balans, shot_turi)
+        self.payyz = payyz
+
+    def payyz_qosu(self, payyz):
+        self.balans *= ( payyz / 100 + 1 )
+        print("Пайыз косылгандагы сумма", self.balans)
+        return 0
+
+
+
+
+
+
+Shot5 = [BankAccount("Bek1", 500, "жинақ"), SavingAccount("Medi2", 5000, "жинақ", 10)]
+for i in Shot5:
+    i.payyz_qosu(10)
+
+# # print(BankAccount.bank_aty)
 Shot1 = BankAccount("Bek1", 500, "жинақ")
 Shot2 = BankAccount("Bek2", 1000, "жинақ")
 Shot3 = BankAccount("Bek3", 1500, "жинақ")
 
-#exception
-try:
-    Shot1.deposit(-100)
-except ValueError as e:
-    print("Қате- ", e, end="\n")
-
-try:
-    Shot4 = BankAccount("Medi",-100, "Жинақ")
-except ValueError as e:
-    print("Қате- ",e)
-print(BankAccount.jalpy_shot_sany)
-
-
-
-
-
-
-
+# #------------exception---------
+# try:
+#     Shot1.deposit(-100)
+# except ValueError as e:
+#     print("Қате- ", e, end="\n")
+#
+#
+# try:
+#     Shot4 = BankAccount("Medi",-100, "Жинақ")
+# except ValueError as e:
+#     print("Қате- ",e)
+#
+#
+# print(BankAccount.jalpy_shot_sany)
 
 
 
