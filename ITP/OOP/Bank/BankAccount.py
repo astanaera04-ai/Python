@@ -39,9 +39,8 @@ class BankAccount:
         else:
             print("Аудару сәтсіз аяқталды")
 
-    def payyz_qosu(self, payyz):
-        self.balans *= ( payyz / 100 + 1 )
-        print("Пайыз косылгандагы сумма", self.balans)
+    def payyz_qosu(self):
+        print("Бұл шотта пайыз жоқ")
 
 
 class SavingAccount(BankAccount):
@@ -49,19 +48,26 @@ class SavingAccount(BankAccount):
         super().__init__(ie, balans, shot_turi)
         self.payyz = payyz
 
-    def payyz_qosu(self, payyz):
-        self.balans *= ( payyz / 100 + 1 )
-        print("Пайыз косылгандагы сумма", self.balans)
-        return 0
+    def payyz_qosu(self):
+        self.balans *= ( self.payyz / 100 + 1 )
+        print("Пайыз косылгандагы сумма", round(self.balans, 1))
 
 
+
+class CheckingAccount(BankAccount):
+    def __init__(self, baslangy_summa, shot_turi, komissiya):
+        super().__init__(baslangy_summa, shot_turi)
+        self.komissiya = komissiya
+
+    def withdraw(self, amount):
+        return super().withdraw(amount + self.komissiya)
 
 
 
 
 Shot5 = [BankAccount("Bek1", 500, "жинақ"), SavingAccount("Medi2", 5000, "жинақ", 10)]
 for i in Shot5:
-    i.payyz_qosu(10)
+    i.payyz_qosu()
 
 # # print(BankAccount.bank_aty)
 Shot1 = BankAccount("Bek1", 500, "жинақ")
