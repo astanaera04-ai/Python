@@ -55,12 +55,16 @@ class SavingAccount(BankAccount):
 
 
 class CheckingAccount(BankAccount):
-    def __init__(self, baslangy_summa, shot_turi, komissiya):
-        super().__init__(baslangy_summa, shot_turi)
+
+    def __init__(self, ie,  baslangy_summa, shot_turi, komissiya):
+        super().__init__(ie, baslangy_summa, shot_turi)
         self.komissiya = komissiya
 
     def withdraw(self, amount):
         return super().withdraw(amount + self.komissiya)
+
+Ch = CheckingAccount("Medi", 2000, "j", 50)
+print(Ch.withdraw(100))
 
 
 
