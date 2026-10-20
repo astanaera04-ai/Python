@@ -65,7 +65,10 @@ class CheckingAccount(BankAccount):
 
 Ch = CheckingAccount("Medi", 2000, "j", 50)
 print(Ch.withdraw(100))
+Ch2 = CheckingAccount("Medi2", 100000, "j", 150)
+print(Ch.withdraw(500))
 
+print(5)
 
 
 
