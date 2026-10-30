@@ -81,6 +81,14 @@ Shot1 = BankAccount("Bek1", 500, "жинақ")
 Shot2 = BankAccount("Bek2", 1000, "жинақ")
 Shot3 = BankAccount("Bek3", 1500, "жинақ")
 
+shottar = [
+    BankAccount("a", 2000, "j"),
+    SavingAccount("B", 5000, "j", 50),
+    CheckingAccount("S", 9900, "j", 25)
+]
+for i in shottar:
+    i.withdraw(55)
+
 # #------------exception---------
 # try:
 #     Shot1.deposit(-100)
