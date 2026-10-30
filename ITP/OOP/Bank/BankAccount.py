@@ -66,10 +66,10 @@ class CheckingAccount(BankAccount):
 Ch = CheckingAccount("Medi", 2000, "j", 50)
 print(Ch.withdraw(100))
 Ch2 = CheckingAccount("Medi2", 100000, "j", 150)
-print(Ch.withdraw(500))
+print(Ch2.withdraw(500))
 
-print(5)
-
+Ch3 = CheckingAccount("Aru", 600, "j", 50)
+print(Ch3.withdraw(100))
 
 
 Shot5 = [BankAccount("Bek1", 500, "жинақ"), SavingAccount("Medi2", 5000, "жинақ", 10)]
