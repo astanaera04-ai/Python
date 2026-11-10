@@ -1,4 +1,13 @@
-class BankAccount:
+class Transaction:
+    def __init__(self, turi, summa):
+        self.turi = turi
+        self.summa = summa
+
+    def __str__(self):
+        return f"{self.turi}: {self.summa} тенге "
+
+
+class BankAccount :
     bank_aty = "Казкоммерц Банк"
     jalpy_shot_sany = 0
     minimum_balans = 500
@@ -11,6 +20,7 @@ class BankAccount:
         self.shot = shot_turi
         BankAccount.jalpy_shot_sany += 1
         self.shot_nomiri = BankAccount.jalpy_shot_sany
+        self.tarih = []
 
     def deposit(self, summa):
         #------------raise ---------------
@@ -63,31 +73,46 @@ class CheckingAccount(BankAccount):
     def withdraw(self, amount):
         return super().withdraw(amount + self.komissiya)
 
-Ch = CheckingAccount("Medi", 2000, "j", 50)
-print(Ch.withdraw(100))
-Ch2 = CheckingAccount("Medi2", 100000, "j", 150)
-print(Ch2.withdraw(500))
 
-Ch3 = CheckingAccount("Aru", 600, "j", 50)
-print(Ch3.withdraw(100))
+t = Transaction("deposit", 200)
+print(t)
+s = BankAccount("A", 1000, "жинақ")
+print(s.balans)
 
 
-Shot5 = [BankAccount("Bek1", 500, "жинақ"), SavingAccount("Medi2", 5000, "жинақ", 10)]
-for i in Shot5:
-    i.payyz_qosu()
 
-# # print(BankAccount.bank_aty)
-Shot1 = BankAccount("Bek1", 500, "жинақ")
-Shot2 = BankAccount("Bek2", 1000, "жинақ")
-Shot3 = BankAccount("Bek3", 1500, "жинақ")
 
-shottar = [
-    BankAccount("a", 2000, "j"),
-    SavingAccount("B", 5000, "j", 50),
-    CheckingAccount("S", 9900, "j", 25)
-]
-for i in shottar:
-    i.withdraw(55)
+# Ch = CheckingAccount("Medi", 2000, "j", 50)
+# print(Ch.withdraw(100))
+# Ch2 = CheckingAccount("Medi2", 100000, "j", 150)
+# print(Ch2.withdraw(500))
+#
+# Ch3 = CheckingAccount("Aru", 600, "j", 50)
+# print(Ch3.withdraw(100))
+#
+#
+# Shot5 = [BankAccount("Bek1", 500, "жинақ"), SavingAccount("Medi2", 5000, "жинақ", 10)]
+# for i in Shot5:
+#     i.payyz_qosu()
+#
+# # # print(BankAccount.bank_aty)
+# Shot1 = BankAccount("Bek1", 500, "жинақ")
+# Shot2 = BankAccount("Bek2", 1000, "жинақ")
+# Shot3 = BankAccount("Bek3", 1500, "жинақ")
+#
+# shottar = [
+#     BankAccount("a", 2000, "j"),
+#     SavingAccount("B", 5000, "j", 50),
+#     CheckingAccount("S", 9900, "j", 25)
+# ]
+# for i in shottar:
+#     i.withdraw(55)
+#
+
+
+
+
+
 
 # #------------exception---------
 # try:
