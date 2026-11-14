@@ -1,0 +1,5 @@
+weekdays = ("Дс", "Сс", "Ср", "Бс", "Жм", "Сб", "Жк")
+print(weekdays[0])
+print(weekdays[-1])
+print(weekdays[:5])
+print("Сб" in weekdays)
