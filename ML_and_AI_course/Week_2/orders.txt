@@ -1,9 +1,11 @@
-wgsrfoms[or grr
-ersgfv
-ersf
-
-yfh
-yug
-hyr
-rtge
-r
+order_id;date;customer;city;category;product;price;quantity
+O101;2026-10-01;Aigerim;Almaty;Electronics;Mouse;6500;2
+O102;2026-10-02;Nurlan;Astana;Books;Python Book;9500;1
+O103;2026-10-03;Dana;Almaty;Stationery;Notebook;900;10
+O104;2026-10-05;Aigerim;Almaty;Books;Novel;4800;2
+O105;2026-10-08;Arman;Shymkent;Electronics;Headphones;25000;1
+O106;2026-10-10;Nurlan;Astana;Stationery;Pen;350;20
+O107;2026-10-12;Dana;Astana;Electronics;Keyboard;14000;1
+O108;2026-10-15;Madina;Shymkent;Books;Python Book;9500;2
+O109;2026-10-18;Aigerim;Almaty;Stationery;Backpack;15500;1
+O110;2026-10-20;Arman;Shymkent;Electronics;Mouse;6500;3
