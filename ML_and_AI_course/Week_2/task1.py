@@ -1,4 +1,7 @@
-cities = ["Almaty", "Astana", "Shymkent", "Karaganda", "Aktobe"]
-print(cities[0])
-print(cities[-1])
-print(len(cities))
+with open("orders.txt", encoding="utf-8") as f:
+    lines = []
+    for line in f:
+        lines.append(line.strip())
+
+for line in lines:
+    print(line)
