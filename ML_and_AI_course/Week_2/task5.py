@@ -1,11 +1,7 @@
-# Тапсырма 5. Клиенттер тізімі
-
 from orders_data import reset_orders
 
-# orders.txt бастапқы 10 тапсырыспен қайта жазылады
 reset_orders()
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 with open("orders.txt", encoding="utf-8") as f:
     lines = [line.strip() for line in f]
 header = lines[0].split(";")

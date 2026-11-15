@@ -2,10 +2,8 @@
 
 from orders_data import reset_orders
 
-# orders.txt бастапқы 10 тапсырыспен қайта жазылады
 reset_orders()
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 with open("orders.txt", encoding="utf-8") as f:
     lines = [line.strip() for line in f]
 header = lines[0].split(";")
@@ -18,15 +16,15 @@ for line in data_lines:
     fields[7] = int(fields[7])
     orders.append(fields)
 
-# ----- Тапсырманың шешімі -----
 amounts = []
+print(orders)
 
 for order in orders:
     amount = order[6] * order[7]
     amounts.append(amount)
 
 print(amounts)
-print("Жалпы түсім:", sum(amounts))                              # 141100
-print("Ең үлкен сома:", max(amounts))                            # 25000
-print("Ең кіші сома:", min(amounts))                             # 7000
-print("Орташа сома:", sum(amounts) / len(amounts))               # 14110.0
+print("Жалпы түсім:", sum(amounts))
+print("Ең үлкен сома:", max(amounts))
+print("Ең кіші сома:", min(amounts))
+print("Орташа сома:", sum(amounts) / len(amounts))

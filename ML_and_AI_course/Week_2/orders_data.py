@@ -1,5 +1,3 @@
-# Барлық тапсырма файлдарына ортақ көмекші модуль.
-# Ол тапсырманың бөлігі емес: тек orders.txt файлын дұрыс күйге келтіреді.
 
 ORIGINAL_ORDERS = """order_id;date;customer;city;category;product;price;quantity
 O101;2026-10-01;Aigerim;Almaty;Electronics;Mouse;6500;2
@@ -22,8 +20,6 @@ NEW_LINES = [
 
 
 def reset_orders(with_new_orders=False):
-    """orders.txt файлын бастапқы 10 тапсырыспен қайта жазады.
-    with_new_orders=True болса, 24-тапсырмада қосылатын 3 жолды да қосады."""
     with open("orders.txt", "w", encoding="utf-8") as f:
         f.write(ORIGINAL_ORDERS)
         if with_new_orders:

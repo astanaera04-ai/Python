@@ -1,11 +1,7 @@
-# Тапсырма 17. Клиенттер санағышы
-
 from orders_data import reset_orders
 
-# orders.txt бастапқы 10 тапсырыспен қайта жазылады
 reset_orders()
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 with open("orders.txt", encoding="utf-8") as f:
     lines = [line.strip() for line in f]
 header = lines[0].split(";")
@@ -24,7 +20,6 @@ for order in orders:
     d["amount"] = d["price"] * d["quantity"]
     orders_dicts.append(d)
 
-# ----- Тапсырманың шешімі -----
 order_count = {}
 
 for o in orders_dicts:

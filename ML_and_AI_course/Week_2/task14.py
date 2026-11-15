@@ -1,11 +1,7 @@
-# Тапсырма 14. Кортеждер тізімі және zip
-
 from orders_data import reset_orders
 
-# orders.txt бастапқы 10 тапсырыспен қайта жазылады
 reset_orders()
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 with open("orders.txt", encoding="utf-8") as f:
     lines = [line.strip() for line in f]
 header = lines[0].split(";")
@@ -22,7 +18,6 @@ customers = [order[2] for order in orders]
 
 amounts = [order[6] * order[7] for order in orders]
 
-# ----- Тапсырманың шешімі -----
 pairs = list(zip(customers, amounts))
 print(pairs)
 
