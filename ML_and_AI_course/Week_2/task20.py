@@ -31,7 +31,6 @@ order_count = {}
 for o in orders_dicts:
     order_count[o["customer"]] = order_count.get(o["customer"], 0) + 1
 
-# ----- Тапсырманың шешімі -----
 total_revenue = sum(o["amount"] for o in orders_dicts)
 
 with open("summary.txt", "w", encoding="utf-8") as f:
