@@ -1,0 +1,5 @@
+order_id;date;customer;city;category;product;price;quantity
+O101;2026-10-01;Aigerim;Almaty;Electronics;Mouse;6500;2
+O103;2026-10-03;Dana;Almaty;Stationery;Notebook;900;10
+O104;2026-10-05;Aigerim;Almaty;Books;Novel;4800;2
+O109;2026-10-18;Aigerim;Almaty;Stationery;Backpack;15500;1

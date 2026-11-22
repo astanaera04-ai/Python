@@ -1,22 +1,17 @@
-# Тапсырма 28. Қалалар бойынша жеке файлдар
-
 import os
 from orders_data import reset_orders
 
-# 24-тапсырмадан кейінгі күй: бастапқы 10 тапсырыс + 3 жаңа жол
 reset_orders(with_new_orders=True)
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 with open("orders.txt", encoding="utf-8") as f:
     header = f.readline().strip().split(";")
 
 def safe_load(path):
-    """Қате жолдарды өткізіп, (тапсырыстар, қателер) кортежін қайтарады."""
     good = []
     bad = []
     with open(path, encoding="utf-8") as f:
         columns = f.readline().strip().split(";")
-        for number, line in enumerate(f, start=2):    # тақырып 1-жол, деректер 2-ден басталады
+        for number, line in enumerate(f, start=2):
             line = line.strip()
             if not line:
                 continue
@@ -34,7 +29,7 @@ def safe_load(path):
 
 orders_all, errors = safe_load("orders.txt")
 
-# ----- Тапсырманың шешімі -----
+#  Тапсырманың шешімі
 os.makedirs("cities", exist_ok=True)
 
 by_city = {}
@@ -52,7 +47,7 @@ city_files = sorted(os.listdir("cities"))
 order_lines = 0
 for name in city_files:
     with open(f"cities/{name}", encoding="utf-8") as f:
-        order_lines += len(f.readlines()) - 1    # тақырып жолын санамаймыз
+        order_lines += len(f.readlines()) - 1
 
-print("Файлдар:", city_files, len(city_files))                        # 4
-print("Тапсырыс жолдары:", order_lines, order_lines == len(orders_all))  # 12 True
+print("Файлдар:", city_files, len(city_files))
+print("Тапсырыс жолдары:", order_lines, order_lines == len(orders_all))

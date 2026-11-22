@@ -9,3 +9,6 @@ O107;2026-10-12;Dana;Astana;Electronics;Keyboard;14000;1
 O108;2026-10-15;Madina;Shymkent;Books;Python Book;9500;2
 O109;2026-10-18;Aigerim;Almaty;Stationery;Backpack;15500;1
 O110;2026-10-20;Arman;Shymkent;Electronics;Mouse;6500;3
+O111;2026-10-25;Madina;Karaganda;Books;Novel;4800;3
+O112;2026-10-28;Nurlan;Astana;Electronics;Headphones;25000;2
+O113;2026-10-30;Dana;Almaty;Stationery;Pen;350;two

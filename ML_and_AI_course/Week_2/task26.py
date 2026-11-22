@@ -1,12 +1,8 @@
-# Тапсырма 26. Санаттар есебі CSV форматында
-
 import csv
 from orders_data import reset_orders
 
-# 24-тапсырмадан кейінгі күй: бастапқы 10 тапсырыс + 3 жаңа жол
 reset_orders(with_new_orders=True)
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 def safe_load(path):
     """Қате жолдарды өткізіп, (тапсырыстар, қателер) кортежін қайтарады."""
     good = []
@@ -31,7 +27,7 @@ def safe_load(path):
 
 orders_all, errors = safe_load("orders.txt")
 
-# ----- Тапсырманың шешімі -----
+#  Тапсырманың шешімі
 category_report = {}
 for o in orders_all:
     info = category_report.setdefault(o["category"], {"category": o["category"], "orders": 0, "quantity": 0, "revenue": 0})

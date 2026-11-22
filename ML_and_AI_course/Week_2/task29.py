@@ -1,21 +1,16 @@
-# Тапсырма 29. Қорытынды есеп
-
 from orders_data import reset_orders
 
-# 24-тапсырмадан кейінгі күй: бастапқы 10 тапсырыс + 3 жаңа жол
 reset_orders(with_new_orders=True)
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 catalog = {"Mouse", "Keyboard", "Headphones", "Laptop", "Python Book",
            "Novel", "Dictionary", "Notebook", "Pen", "Backpack"}
 
 def safe_load(path):
-    """Қате жолдарды өткізіп, (тапсырыстар, қателер) кортежін қайтарады."""
     good = []
     bad = []
     with open(path, encoding="utf-8") as f:
         columns = f.readline().strip().split(";")
-        for number, line in enumerate(f, start=2):    # тақырып 1-жол, деректер 2-ден басталады
+        for number, line in enumerate(f, start=2):
             line = line.strip()
             if not line:
                 continue
@@ -32,7 +27,6 @@ def safe_load(path):
     return good, bad
 
 def customer_stats(orders):
-    """Әр клиенттің тапсырыстары туралы жиынтық ақпаратты қайтарады."""
     stats = {}
     for o in orders:
         info = stats.setdefault(o["customer"], {"orders": 0, "total": 0, "average": 0, "cities": set()})
@@ -45,7 +39,6 @@ def customer_stats(orders):
 
 # ----- Тапсырманың шешімі -----
 def build_report(path, report_path):
-    """Файлды талдап, қорытынды есепті report_path файлына жазады."""
     good, bad = safe_load(path)
     total = sum(o["amount"] for o in good)
     dates = [o["date"] for o in good]

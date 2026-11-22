@@ -1,0 +1,4 @@
+order_id;date;customer;city;category;product;price;quantity
+O105;2026-10-08;Arman;Shymkent;Electronics;Headphones;25000;1
+O108;2026-10-15;Madina;Shymkent;Books;Python Book;9500;2
+O110;2026-10-20;Arman;Shymkent;Electronics;Mouse;6500;3

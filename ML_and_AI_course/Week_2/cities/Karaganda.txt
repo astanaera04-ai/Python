@@ -1,0 +1,2 @@
+order_id;date;customer;city;category;product;price;quantity
+O111;2026-10-25;Madina;Karaganda;Books;Novel;4800;3

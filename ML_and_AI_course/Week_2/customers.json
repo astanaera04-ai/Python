@@ -1,0 +1,44 @@
+{
+    "Aigerim": {
+        "orders": 3,
+        "total": 38100,
+        "average": 12700.0,
+        "cities": [
+            "Almaty"
+        ]
+    },
+    "Nurlan": {
+        "orders": 3,
+        "total": 66500,
+        "average": 22166.7,
+        "cities": [
+            "Astana"
+        ]
+    },
+    "Dana": {
+        "orders": 2,
+        "total": 23000,
+        "average": 11500.0,
+        "cities": [
+            "Almaty",
+            "Astana"
+        ]
+    },
+    "Arman": {
+        "orders": 2,
+        "total": 44500,
+        "average": 22250.0,
+        "cities": [
+            "Shymkent"
+        ]
+    },
+    "Madina": {
+        "orders": 2,
+        "total": 33400,
+        "average": 16700.0,
+        "cities": [
+            "Karaganda",
+            "Shymkent"
+        ]
+    }
+}

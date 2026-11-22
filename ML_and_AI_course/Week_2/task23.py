@@ -1,11 +1,7 @@
-# Тапсырма 23. Клиенттер есебі
-
 from orders_data import reset_orders
 
-# orders.txt бастапқы 10 тапсырыспен қайта жазылады
 reset_orders()
 
-# ----- Алдыңғы тапсырмалардан керек деректер -----
 with open("orders.txt", encoding="utf-8") as f:
     lines = [line.strip() for line in f]
 header = lines[0].split(";")
@@ -24,9 +20,9 @@ for order in orders:
     d["amount"] = d["price"] * d["quantity"]
     orders_dicts.append(d)
 
-# ----- Тапсырманың шешімі -----
+
+
 def customer_stats(orders):
-    """Әр клиенттің тапсырыстары туралы жиынтық ақпаратты қайтарады."""
     stats = {}
     for o in orders:
         info = stats.setdefault(o["customer"], {"orders": 0, "total": 0, "average": 0, "cities": set()})
@@ -39,9 +35,10 @@ def customer_stats(orders):
 
 
 cstats = customer_stats(orders_dicts)
+# print(cstats)
 
 multi_city = [name for name, info in cstats.items() if len(info["cities"]) > 1]
 print("Бірнеше қаладан тапсырыс берген:", multi_city)              # ['Dana']
 
 top_spender = max(cstats, key=lambda name: cstats[name]["total"])
-print("Ең көп жұмсаған клиент:", top_spender, cstats[top_spender]["total"])   # Arman 44500
+print("Ең көп жұмсаған клиент:", top_spender, cstats[top_spender]["total"])

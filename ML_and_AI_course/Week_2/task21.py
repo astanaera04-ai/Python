@@ -1,5 +1,3 @@
-# Тапсырма 21. Файлды оқитын функция
-
 from orders_data import reset_orders
 
 # orders.txt бастапқы 10 тапсырыспен қайта жазылады
@@ -24,15 +22,14 @@ for order in orders:
     d["amount"] = d["price"] * d["quantity"]
     orders_dicts.append(d)
 
-# ----- Тапсырманың шешімі -----
 def load_orders(path):
-    """Файлды оқып, тапсырыстарды сөздіктер тізімі ретінде қайтарады."""
+
     result = []
     with open(path, encoding="utf-8") as f:
         columns = f.readline().strip().split(";")
         for line in f:
             line = line.strip()
-            if not line:                 # бос жолдарды өткізіп жіберу
+            if not line:
                 continue
             values = line.split(";")
             values[6] = int(values[6])
@@ -45,4 +42,4 @@ def load_orders(path):
 
 loaded = load_orders("orders.txt")
 print(len(loaded))
-print(loaded == orders_dicts)         # True
+print(loaded == orders_dicts)
